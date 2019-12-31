@@ -4,7 +4,23 @@
 网址：https://gitee.com/opencv-lhd   G码云
 opencv分为两个库：opencv_contrib ,opencv
 分为两个库原因是因为专利问题。opencv_contrib里有些比如SIFT....算法。我就是因为SIFT才写的这篇笔录。
+注意:opencv和opencv_contrib版本要一致
 2.编译源码:cmake编译。
-在window编译：
-1.下载CMake(cmake_gui)软件
+在window和Linux编译：
+1)下载CMake(cmake_gui)软件
 网址:https://cmake.org/download/
+下载后缀名.msi的链接名称。
+2)CMake 编译
+源码文件路径搁在source code里，源码的最终路径里包含cmakefile文件。比如：D:\opencv1\opencv
+最终编译出来的文件搁在 build the binaries里
+点击Configure 出现红框后做以下处理
+(1)勾选BUILD_TBB 选项
+(2)常规下编译opencv源码会生成很多库。如果在使用CMake生成VS解决方案时把BUILD_opencv_world选项勾上，则可以只生成一个库.
+例如:opencv_world346.lib 包含了很对各种类型的库.
+(3)往opencv中添加opencv_contrib模块，找到OPENCV_EXTRA_MODULES_PATH，后面添加路径精确到\modules。然后继续configure，
+   一次之后如果还有红色的块，继续configure，知道全部变白为止.
+ 3.再次编译源码:
+ windows: vs编译
+ 点击Open Project按钮在build下找到OPENCV.sln，打开，找到CMakeTargets下的INSTALL，在Debug和Release下分别右键生成即可。
+ 例如：D:\opencv1\opencv_build\install 下就是最终编译生成的opencv库
+ linux:make编译 同理

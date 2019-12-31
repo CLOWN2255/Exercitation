@@ -24,3 +24,9 @@ opencv分为两个库：opencv_contrib ,opencv
  点击Open Project按钮在build下找到OPENCV.sln，打开，找到CMakeTargets下的INSTALL，在Debug和Release下分别右键生成即可。
  例如：D:\opencv1\opencv_build\install 下就是最终编译生成的opencv库
  linux:make编译 同理
+4.opencv在vs的应用
+vs新建项目->属性->vc++目录->包含目录：
+例如：D:\opencv\opencv\build\include\opencv2
+     D:\opencv\opencv\build\include 
+vs新建项目->属性->vc++目录->库目录：D:\opencv\opencv\build\include\opencv2
+vs新建项目->属性->链接器->输入->附加依赖项 :例 opencv_world346.lib

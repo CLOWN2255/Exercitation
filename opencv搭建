@@ -1,0 +1,10 @@
+简述:opencv的搭建在学习opencv整个路程中不算特别重要。但是所谓万事开头难啊。虽然说不重要，但是连一个环境你他妈的都搭建不好，还学什么！我觉得有必要把opencv的环境搭建做一个笔录。
+1.下载opencv源码:在opencv官网和github上下载比较慢。原因国内禁止访问国外大部分网站。其实这种做法是对的，国外的有些网站真他妈牲口！不过我喜欢。
+最快的下载方法。
+网址：https://gitee.com/opencv-lhd   G码云
+opencv分为两个库：opencv_contrib ,opencv
+分为两个库原因是因为专利问题。opencv_contrib里有些比如SIFT....算法。我就是因为SIFT才写的这篇笔录。
+2.编译源码:cmake编译。
+在window编译：
+1.下载CMake(cmake_gui)软件
+网址:https://cmake.org/download/

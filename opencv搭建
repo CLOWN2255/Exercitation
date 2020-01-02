@@ -18,7 +18,7 @@ opencv分为两个库：opencv_contrib ,opencv
 (2)常规下编译opencv源码会生成很多库。如果在使用CMake生成VS解决方案时把BUILD_opencv_world选项勾上，则可以只生成一个库.
 例如:opencv_world346.lib 包含了很对各种类型的库.
 (3)往opencv中添加opencv_contrib模块，找到OPENCV_EXTRA_MODULES_PATH，后面添加路径精确到\modules。然后继续configure，
-   一次之后如果还有红色的块，继续configure，知道全部变白为止.
+   一次之后如果还有红色的块，继续configure，直到全部变白为止.
  3.再次编译源码:
  windows: vs编译
  点击Open Project按钮在build下找到OPENCV.sln，打开，找到CMakeTargets下的INSTALL，在Debug和Release下分别右键生成即可。
